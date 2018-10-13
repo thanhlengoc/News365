@@ -1,10 +1,10 @@
 import React from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
-import Tab1Screen from '../screen/Tab1';
-import Tab2Screen from '../screen/Tab2';
+import VideosScreen from '../screen/Videos';
+import TrendingScreen from '../screen/Trending';
 import HomeScreen from '../screen/HomeScreen';
-import SettingsScreen from '../screen/SettingsScreen';
+import PersonScreen from '../screen/PersonScreen';
 import DetailsScreen from '../screen/DetailsScreen';
 
 const HomeTabStack = createStackNavigator({
@@ -12,28 +12,28 @@ const HomeTabStack = createStackNavigator({
   Details: { screen: DetailsScreen },
 });
 
-const SettingsStack = createStackNavigator({
-  Settings: { screen: SettingsScreen },
+const PersonStack = createStackNavigator({
+  Person: { screen: PersonScreen },
   Details: { screen: DetailsScreen },
 });
 
-const Tab1Stack = createStackNavigator({
-  Tab1: { screen: Tab1Screen },
+const VideosStack = createStackNavigator({
+  Videos: { screen: VideosScreen },
   Details: { screen: DetailsScreen },
 });
 
-const Tab2Stack = createStackNavigator({
-  Tab2: { screen: Tab2Screen },
+const TrendingStack = createStackNavigator({
+  Trending: { screen: TrendingScreen },
   Details: { screen: DetailsScreen },
 })
 
 
 const MyBottomTabNavigator = createBottomTabNavigator(
   {
-    Home: { screen: HomeTabStack },
-    News: { screen: Tab1Stack },
-    Store: { screen: Tab2Stack },
-    Settings: { screen: SettingsStack },
+    'Tin tức': { screen: HomeTabStack },
+    'Videos': { screen: VideosStack },
+    'Xu hướng': { screen: TrendingStack },
+    'Cá nhân': { screen: PersonStack },
     
   },
   {
@@ -41,16 +41,16 @@ const MyBottomTabNavigator = createBottomTabNavigator(
       tabBarIcon: ({ focused, tintColor }) => {
         const { routeName } = navigation.state;
         let iconName;
-        if (routeName === 'Home') {
-          iconName = `ios-information-circle${focused ? '' : '-outline'}`;
-        } else if (routeName === 'Settings') {
-          iconName = `ios-options${focused ? '' : '-outline'}`;
+        if (routeName === 'Tin tức') {
+          iconName = `ios-list-box-outline`;
+        } else if (routeName === 'Cá nhân') {
+          iconName = `ios-person${focused ? '' : '-outline'}`;
         }
-        else if (routeName == 'News') {
-          iconName = `ios-book${focused ? '' : '-outline'}`;
+        else if (routeName == 'Videos') {
+          iconName = `ios-videocam${focused ? '' : '-outline'}`;
         }
-        else if (routeName == 'Store') {
-          iconName = `ios-basket${focused ? '' : '-outline'}`;
+        else if (routeName == 'Xu hướng') {
+          iconName = `ios-trending-up${focused ? '' : '-outline'}`;
         }
 
         // You can return any component that you like here! We usually use an

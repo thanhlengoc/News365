@@ -4,9 +4,9 @@ import { Button, Text, View } from 'react-native';
 //import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 
-export default class Tab1Screen extends React.Component {
+export default class TrendingScreen extends React.Component {
   static navigationOptions = {
-    title: 'Tab1',
+    title: 'Xu hướng',
     headerStyle: {
       backgroundColor: '#f4511e',
     },
@@ -18,10 +18,10 @@ export default class Tab1Screen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center',backgroundColor:'#ffffe0' }}>
-        <Text>Tab1 screen</Text>
+        <Text>Tab2 screen</Text>
         <Button
-          title="Go to Settings"
-          onPress={() => this.props.navigation.navigate('Settings')}
+          title="Go to Person"
+          onPress={() => this.props.navigation.navigate('Person')}
         />
         <Button
           title="Go to Details"

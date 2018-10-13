@@ -12,5 +12,5 @@ import ViewPagerPage from './components/Viewpager';
 import AppNavigator from './components/MaterialTopTabNavigatior';
 import Example from './components/Modal';
 
-export default Example;
-//export default MyDrawerNavigator;
+//export default Example;
+export default MyDrawerNavigator;
