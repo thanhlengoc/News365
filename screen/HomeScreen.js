@@ -52,8 +52,8 @@ const HomeScreen = createMaterialTopTabNavigator (
 
 HomeScreen.navigationOptions = ({navigation}) => ({
   //header: null
-  headerTitle: <LogoTitle />,
-  title: 'Home',
+  //headerTitle: 'Clothing',
+  title: 'Clothing',
   headerStyle: {
       backgroundColor: '#f4511e',
       height: 45,
@@ -67,36 +67,3 @@ HomeScreen.navigationOptions = ({navigation}) => ({
   ),
 });
 export default HomeScreen;
-
-// export default class HomeScreen extends React.Component {
-//   static navigationOptions = ({navigation}) => ({
-//     headerTitle: <LogoTitle />,
-//     title: 'Home',
-//     headerStyle: {
-//       backgroundColor: '#f4511e',
-//       height: 20,
-//     },
-//     headerTintColor: '#fff',
-//     headerTitleStyle: {
-//       fontWeight: 'bold',
-//     },
-//     headerLeft: (
-//       <MenuButton navigation = { navigation } />
-//     ),
-//   });
-//   render() {
-//     return (
-//       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center',backgroundColor:'#ffffe0' }}>
-//         <Text>Home screen</Text>
-//         <Button
-//           title="Go to Settings"
-//           onPress={() => this.props.navigation.navigate('Settings')}
-//         />
-//         <Button
-//           title="Go to Details"
-//           onPress={() => this.props.navigation.navigate('Details',{username:'Details'})}
-//         />
-//       </View>
-//     );
-//   }
-// }
